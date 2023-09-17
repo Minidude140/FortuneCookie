@@ -23,6 +23,7 @@ Module FortuneCookie
         Dim userInput As String
 
         Do While exitFlag = False
+
             Console.WriteLine("Hello, would you like a fortune cookie?" & vbLf & "(Press any key to Open a Cookie or Press Q to leave)")
             userInput = Console.ReadLine()
             Console.WriteLine()
@@ -32,10 +33,19 @@ Module FortuneCookie
                     exitFlag = True
                 Case Else
                     'open cookie routine
-                    Console.WriteLine("*hands too weak to open cookie*" & vbLf & "You reluctantly return the cookie" & vbLf)
+                    'Console.WriteLine("*hands too weak to open cookie*" & vbLf & "You reluctantly return the cookie" & vbLf)
+                    OpenCookie()
             End Select
         Loop
 
+
+    End Sub
+
+    Sub OpenCookie()
+        Dim randomNumber As Integer
+        Randomize()
+        randomNumber = CInt(Rnd() * 10)
+        Console.WriteLine(randomNumber)
 
     End Sub
 
