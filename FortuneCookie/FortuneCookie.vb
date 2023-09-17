@@ -14,28 +14,46 @@ Module FortuneCookie
     '[*~]Make main loop: Quit, CLear messages, and Open cookie
     '[~]OpenCookie Sub that writes message to the user
     '[~]OpenCookie Sub should take random number to determine the response
-    '[]Create at least 3 responses
+    '[~]Create at least 3 responses
 
 
 
     Sub Main()
         Dim exitFlag As Boolean = False
         Dim userInput As String
+        Dim cookiesOpened As Integer = 0
 
         Do While exitFlag = False
 
-            Console.WriteLine("Hello, would you like a fortune cookie?" & vbLf & "(Press any key to Open a Cookie or Press Q to leave)")
-            userInput = Console.ReadLine()
-            Console.WriteLine()
+            If cookiesOpened = 0 Then
+                Console.WriteLine("Hello, would you like a fortune cookie?" & vbLf & "(Press any key to Open a Cookie or Press Q to leave)")
+                userInput = Console.ReadLine()
+                Console.WriteLine()
 
-            Select Case userInput
-                Case = "Q", "q"
+                If userInput = "Q" Or userInput = "q" Then
                     exitFlag = True
-                Case Else
+                Else
                     'open cookie routine
                     'Console.WriteLine("*hands too weak to open cookie*" & vbLf & "You reluctantly return the cookie" & vbLf)
                     OpenCookie()
-            End Select
+                    cookiesOpened += 1
+                End If
+            Else
+                Console.WriteLine("Would you like another cookie?" & vbLf & "(Press any key to Open another Cookie, 'C' to throw away the old fortunes, or 'Q' to leave)")
+                userInput = Console.ReadLine()
+                Console.WriteLine()
+
+                Select Case userInput
+                    Case = "Q", "q"
+                        exitFlag = True
+                    Case = "C", "c"
+                        Console.Clear()
+                    Case Else
+                        OpenCookie()
+                End Select
+            End If
+
+
         Loop
 
 
