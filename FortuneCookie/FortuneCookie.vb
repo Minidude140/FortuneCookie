@@ -44,8 +44,22 @@ Module FortuneCookie
     Sub OpenCookie()
         Dim randomNumber As Integer
         Randomize()
-        randomNumber = CInt(Rnd() * 10)
-        Console.WriteLine(randomNumber)
+        randomNumber = CInt((Rnd() * 10) / 2)
+        Select Case randomNumber
+            Case = 0
+                Console.WriteLine("Message 0" & vbLf)
+            Case = 1
+                Console.WriteLine("Message 1" & vbLf)
+            Case = 2
+                Console.WriteLine("Message 2" & vbLf)
+            Case = 3
+                Console.WriteLine("Message 3" & vbLf)
+            Case = 4
+                Console.WriteLine("Message 4" & vbLf)
+            Case = 5
+                Console.WriteLine("Message 5" & vbLf)
+
+        End Select
 
     End Sub
 
