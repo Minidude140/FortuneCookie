@@ -12,8 +12,8 @@ Module FortuneCookie
 
     'TODO
     '[*~]Make main loop: Quit, CLear messages, and Open cookie
-    '[]OpenCookie Sub that writes message to the user
-    '[]OpenCookie Sub should take random number to determine the response
+    '[~]OpenCookie Sub that writes message to the user
+    '[~]OpenCookie Sub should take random number to determine the response
     '[]Create at least 3 responses
 
 
@@ -47,17 +47,23 @@ Module FortuneCookie
         randomNumber = CInt((Rnd() * 10) / 2)
         Select Case randomNumber
             Case = 0
-                Console.WriteLine("Message 0" & vbLf)
+                '-Obi-Wan Kenobi, A New Hope
+                Console.WriteLine("Who is the more foolish? The fool, or the fool who follows him?" & vbLf)
             Case = 1
-                Console.WriteLine("Message 1" & vbLf)
+                '-Obi-Wan Kenobi, The Clone Wars (2008)
+                Console.WriteLine("A great leap forward often requires first taking two steps back." & vbLf)
             Case = 2
-                Console.WriteLine("Message 2" & vbLf)
+                'Plo-Koon, The Clone Wars (2008)
+                Console.WriteLine("When You Ask For Trouble, You Should Not Be Surprised If It Finds You." & vbLf)
             Case = 3
-                Console.WriteLine("Message 3" & vbLf)
+                'Shmi Skywalker, The phantom Menace
+                Console.WriteLine("The Biggest Problem In The Universe Is That Nobody Helps Each Other." & vbLf)
             Case = 4
-                Console.WriteLine("Message 4" & vbLf)
+                'Qui-Gon Jinn, The Phantom Menace
+                Console.WriteLine("Your Focus Determines Your Reality." & vbLf)
             Case = 5
-                Console.WriteLine("Message 5" & vbLf)
+                'G-Man, Half-Life 2
+                Console.WriteLine("The right man in the wrong place can make all the difference in the world." & vbLf)
 
         End Select
 
